@@ -9,5 +9,10 @@ def create
         render json: user
     end
 
+  #LOGOUT
+    def destroy
+        session.delete :user_id
+        head :no_content
+    end
 
 end
